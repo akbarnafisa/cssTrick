@@ -1,0 +1,70 @@
+html{
+	font-size: 10px;
+	background : whitesmoke;
+	color : rgb(40,60,80) ;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+.font-1{
+	font-family: 'Playfair Display', serif;
+}
+
+.font-2{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+a{
+	text-decoration: none;
+}
+
+.hidden{
+	display: none;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+
+.button{
+  padding : 1.2rem 2.4rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: color .3s ease , background .3s ease ;
+  position: relative;
+  z-index: 9;
+}
+
+.btn-primary{
+    background : #657ED4;
+    color :#F7FFF7;
+}
+
+.btn-primary:hover{
+  background : #3626A7;
+}
+
+.btn-ghost{
+  border: 2px solid #657ED4;
+  color : #657ED4;
+}
+
+.btn-ghost:hover{
+  background : #3626A7;
+  color : #F7FFF7;
+  border: 2px solid #3626A7;
+}
+
+
+
+
