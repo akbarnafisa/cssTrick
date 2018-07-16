@@ -9,7 +9,7 @@ const createStore = () => {
       },
 			projects:[
         {
-          title : 'Material BUtton',
+          title : 'Material Button',
           tags : ['Three.js','Image'],
           origin : '',
           link : 'material-button',
@@ -25,10 +25,10 @@ const createStore = () => {
           thumbnail : 'https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/04/DistortionHoverEffect.jpg'
         },
         {
-          title : 'Particle Effects for Buttons',
+          title : 'Circle Hamburger Menu',
            tags : ['Naviagtion','Component'],
            origin : '',
-          link : 'circle-on-mouse',
+          link : 'circle-hamburger-menu',
           github : 'https://www.youtube.com/?pbjreload=10',
           thumbnail : 'https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/05/GridLayoutMotion_featured.jpg'
         },

@@ -11,11 +11,13 @@ import cursorOnLink from '~/components/circle on mouse/cursorOnLink'
 import cursorOnElement from '~/components/circle on mouse/cursorOnElement'
 import cursorCard from '~/components/circle on mouse/cursorCard'
 
+import circleNav from '~/components/circle humburger/circleNav'
 
 
 
 
-const components = {Card,FilterButton,Search,MaterialButton,MaterialButton2,cursorOnLink,cursorOnElement,cursorMouse,cursorCard}
+
+const components = {Card,FilterButton,Search,MaterialButton,MaterialButton2,cursorOnLink,cursorOnElement,cursorMouse,cursorCard,circleNav}
 
 Object.keys(components).forEach(key => {
   Vue.component(key, components[key])
