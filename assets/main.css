@@ -17,6 +17,17 @@ body{
 	font-family: 'Josefin Sans', sans-serif;
 }
 
+.font-3{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fw-700{
+  font-weight: 700;
+}
+.fw-300{
+  font-weight: 300;
+}
+
 a{
 	text-decoration: none;
 }
@@ -30,6 +41,19 @@ a{
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.current-index:nth-of-type(1)  .wrapper {
+  background-color: #e0f3ca;
+}
+.current-index:nth-of-type(2) .wrapper {
+  background-color: #fee9b1;
+}
+.current-index:nth-of-type(3) .wrapper {
+  background-color: #f3cae8;
+}
+.current-index:nth-of-type(4) .wrapper {
+  background-color: #cacaf3;
 }
 
 
