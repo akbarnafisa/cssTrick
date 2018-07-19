@@ -1,11 +1,40 @@
 <template>
 	<div class="section-wrapper">
-		<h2 class="font-3 fw-700">hiking</h2>
-		<p class="font-3 fw-300">Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walks.</p>
+		<div class="title-wrapper">
+			<indexSection :currentIndex="i" type="index" ref="indexRef" v-for="(data,i) in datas">
+				<h2 class="font-3 fw-700">{{data.title}}</h2>
+			</indexSection>
+		</div>
+		<div class="desc-wrapper">
+			<indexSection :currentIndex="i" type="descContent" ref="indexRef" v-for="(data,i) in datas">
+				<p class="font-3 fw-300">{{data.desc}}</p>
+			</indexSection>
+		</div>
 	</div>
 </template>
-<script ></script>
+<script >
+export default{
+	props : ['index','direction'],
+	data(){
+		return{
+			datas : this.$parent.datas,
+		}
+	}
+}
+</script>
 <style scoped>
+.title-wrapper, .desc-wrapper{
+  width: 100%;
+  height: 49%;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.section-wrapper{
+	width: 100%;
+	height: 100%;
+}
  h2{
  	font-size: 8vw;
  	margin :0;

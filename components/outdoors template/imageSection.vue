@@ -1,17 +1,20 @@
 <template>
-	<div  class="image-wrapper">
-		<div class="image"></div>
+	<div class="image-wrapper">
+		<div  class="image" :style="{ 'background-image': 'url(' + url + ')' }" ></div>
 	</div>
 </template>
-<script ></script>
+<script >
+	export default{
+		props :['url']
+	}
+</script>
 <style scoped>
 	.image-wrapper{
 		width: 100%;
-		height: 77%;
+		height: 100%;
 	}
 	.image{
-		background-image: url('https://tympanus.net/Development/OutdoorsTemplate/img/2.jpg');
-		background-position: center center;
+			background-position: center center;
 		-webkit-background-size: cover;
 		background-size: cover;
 		width: 100%;

@@ -4,14 +4,16 @@
 			<navSection></navSection>
 			<div class="indexContent-wrapper">
 				<div class="inner-wrapper">
-					<indexSection type="index" ref="indexRef" v-for="(data,index) in datas">
-						<div class="font-3 fw-700">0{{index + 1}}</div>
+					<indexSection :currentIndex="i" type="index" ref="indexRef" v-for="(data,i) in datas">
+						<div class="font-3 fw-700">0{{i + 1}}</div>
 					</indexSection>
 					<div class="bar"></div>
 					<div class="total-index font-3 fw-700">04</div>
 				</div>
 			</div>
-			<contentSection></contentSection>
+			<div class="contentSection-wrapper">
+				<contentSection :index="index" :direction="direction" ></contentSection>
+			</div>
 			<div class="image-controller-wrapper">
 				<button  @click.prevent="next" class="image-controller">
 					<svg data-v-074d5ace="" xmlns="http://www.w3.org/2000/svg" fill="#000000" height="36" viewBox="0 0 24 24" width="36"><path data-v-074d5ace="" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path data-v-074d5ace="" d="M0 0h24v24H0z" fill="none"></path></svg>
@@ -22,11 +24,15 @@
 			</div>
 		</div>
 		<div class="right-wrapper">
-			<imageSection></imageSection>
+			<div class="imageSection-wrapper">
+				<indexSection :currentIndex="i" type="imageSection" ref="moreRef" v-for="(data,i) in datas">
+						<imageSection :url="data.url"></imageSection>
+				</indexSection>
+			</div>
 			<div class="info-wrapper">
-				<factSection></factSection>
+				<factSection :index="index"></factSection>
 				<div class="moreSection-wrapper">
-					<indexSection type="index" ref="moreRef" v-for="(data,index) in datas">
+					<indexSection :currentIndex="i" type="index" ref="moreRef" v-for="(data,i) in datas">
 							<moreSection></moreSection>
 					</indexSection>
 				</div>
@@ -37,20 +43,11 @@
 <script >
 	export default{
 		mounted(){
-			this.slides = this.$refs.indexRef
-			var moreSlide = []
-			moreSlide = this.$refs.moreRef
-
-			this.slides.forEach((slide, i) => {
-				slide.index = i
-			})
-			moreSlide.forEach((slide, i) => {
-				slide.index = i
-			})
+			
 		},
 		computed :{
 			slidesCount(){
-				return this.slides.length
+				return this.datas.length
 			}
 		},
 		methods:{
@@ -64,7 +61,7 @@
 				setTimeout(function() {
 		        event.target.parentNode.disabled = false;
 		    }, 900);
-		    console.log(event.target.parentNode.parentNode)
+		   
 			},
 			prev(event){
 				this.index--
@@ -76,7 +73,7 @@
 				setTimeout(function() {
 		        event.target.parentNode.disabled = false;
 		    }, 900);
-		    console.log(event.target.parentNode.parentNode)
+		 
 			},
 		},
 		data(){
@@ -86,16 +83,99 @@
 				slides : [],
 				direction : null,
 				datas : [
-					{url : 'http://lorempicsum.com/futurama/630/300/3', },
-					{url : 'http://lorempicsum.com/futurama/630/300/2', },
-					{url : 'http://lorempicsum.com/futurama/630/300/1', },
-					{url : 'https://cdn.css-tricks.com/wp-content/uploads/2017/01/vue-2-1.jpg'}
+					{
+						title : 'lakes',
+						desc : 'A lake is an area filled with water, localized in a basin, that is surrounded by land, apart from any river or other outlet that serves to feed or drain the lake. Lakes lie on land and are not part of the ocean',
+						url : 'https://tympanus.net/Development/OutdoorsTemplate/img/2.jpg',
+						fact : [
+							{
+								title : 'Biggest lake',
+								desc : 'Caspian sea in Kazakhstan'
+							},
+							{
+								title : 'Coolest activity',
+								desc : 'Kayaking the whole lake'
+							},
+							{
+								title : 'Lake depth',
+								desc : 'With 55m its the deepest'
+							},
+						]
+					},
+					{
+						title : 'hiking',
+						desc : 'Hiking is the preferred term, in Canada and the United States, for a long, vigorous walk, usually on trails (footpaths), in the countryside, while the word walking is used for shorter, particularly urban walk',
+						url : 'https://tympanus.net/Development/OutdoorsTemplate/img/1.jpg',
+						fact : [
+							{
+								title : 'Lovely paths',
+								desc : 'Caspian sea in Kazakhstan'
+							},
+							{
+								title : 'Haunted ways',
+								desc : 'Kayaking the whole lake'
+							},
+							{
+								title : 'Running and more',
+								desc : 'With 55m its the deepest'
+							},
+						]
+					},
+					{
+						title : 'paths',
+						desc : 'A footpath (also pedestrian way, walking trail, nature trail) is a type of thoroughfare that is intended for use only by pedestrians and not other forms of traffic such as motorized vehicles, cycles, and horses',
+						url : 'https://tympanus.net/Development/OutdoorsTemplate/img/3.jpg',
+						fact : [
+							{
+								title : 'Biggest lake',
+								desc : 'Caspian sea in Kazakhstan'
+							},
+							{
+								title : 'Coolest activity',
+								desc : 'Kayaking the whole lake'
+							},
+							{
+								title : 'Lake depth',
+								desc : 'With 55m its the deepest'
+							},
+						]
+					},
+					{
+						title : 'rivers',
+						desc : 'A river is a natural flowing watercourse, usually freshwater, sea, lake or another river. In some cases a river flows into the ground and becomes dry at the end of its course without reaching another body of wate',
+						url : 'https://tympanus.net/Development/OutdoorsTemplate/img/4.jpg',
+						fact : [
+							{
+								title : 'River romantics',
+								desc : 'Caspian sea in Kazakhstan'
+							},
+							{
+								title : 'History call',
+								desc : 'Kayaking the whole lake'
+							},
+							{
+								title : 'Walking around',
+								desc : 'With 55m its the deepest'
+							},
+						]
+					},
 				]
 			}
 		}
 	}
 </script>
 <style scoped>
+	.imageSection-wrapper{
+		width: 100%;
+		height: 77%;
+		position: relative;
+		overflow : hidden;
+
+	}
+	.contentSection-wrapper{
+		position: relative;
+		height: 40%;
+	}
 	button{
 		outline: none;
 	}
@@ -104,6 +184,7 @@
 		height: 100%;
 		position: relative;
 		cursor: pointer;
+		overflow : hidden;
 	}
 	.total-index{
 			font-size: 12px;
