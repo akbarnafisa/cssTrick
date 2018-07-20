@@ -41,18 +41,19 @@ const createStore = () => {
           thumbnail : 'https://cdn.pbrd.co/images/HuScXAM.png'
         },
         {
-          title : 'Particle Effects for Buttons',
+          title : 'The gooey effect',
            tags : ['Naviagtion','3D','Three.js'],
-          link : 'circle-on-mouse',
-          origin : '',
+          link : 'gooey-effect',
+          origin : 'https://css-tricks.com/gooey-effect/',
           github : 'https://www.youtube.com/?pbjreload=10',
-          thumbnail : 'https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/03/DesignerWorkspace_Featured.jpg'
+          thumbnail : 'https://cdn.pbrd.co/images/Hvish7K.png'
         },
        ],
     },
 		mutations: {
 			createProjects (state,payload){
 				state.projects.push(payload)
+
 			},
       setMouse (state,payload){
         state.mouseIn = payload
@@ -61,12 +62,13 @@ const createStore = () => {
 		actions : {
 			createProjects({commit},payload){
 				const Project = {
-					title  :  payload.titleInput,  
-					link  :  payload.linkInput, 
-					github : payload.githubInput ,
-					thumbnail : payload.thumbnailInput ,
-					tags : payload.tagsInput
+					title  :  payload.title,  
+					link  :  payload.link, 
+					github : payload.github ,
+					thumbnail : payload.thumbnail ,
+					tags : payload.tags
 				}
+				console.log(payload)
 				commit('createProjects', Project )
 			},
       changeMouse({commit},payload){

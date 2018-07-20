@@ -92,20 +92,20 @@
       },
       onAddProject(){
         if( this.titleInput != '' && this.linkInput !='' && this.githubInput !='' && this.thumbnailInput !='' ){
-          this.projects.push(project)
           const project = {
             title  :  this.titleInput,  
             link  :  this.linkInput, 
             github : this.githubInput ,
             thumbnail : this.thumbnailInput ,
-            tags : this.tagsInput
+            tags : ['3D','Navigation'],
           }
+          // this.projects.push(project)
           this.$store.dispatch('createProjects', project)
           this.titleInput = ''
           this.linkInput = ''
           this.githubInput = ''
           this.thumbnailInput = ''
-          
+      
         }
     
         this.panelActive = !this.panelActive
@@ -116,19 +116,20 @@
       return this.$store.getters.loadProjects
     },
      filteredList() {
-      if(this.filterArray.length > 0){
+      if(this.filterArray.length > 0){ // filter using tag
         return this.projects.filter(project => {
           return this.filterArray.every((val) => project.tags.includes(val))
         })
       }
       else{
-        return this.projects.filter(project => {
+        return this.projects.filter(project => { // filter using search
           return project.title.toLowerCase().includes(this.search.toLowerCase())
         })
       }
      },
      tagList(){
         var tag = []
+      
         this.projects.forEach( project => {
           project.tags.forEach(item => tag.includes(item) ? null : tag.push(item));
         })
