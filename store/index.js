@@ -10,7 +10,7 @@ const createStore = () => {
 			projects:[
         {
           title : 'Material Button',
-          tags : ['Three.js','Image'],
+          tags : ['Button'],
           origin : '',
           link : 'material-button',
           github : 'https://www.youtube.com/?pbjreload=10',
@@ -18,7 +18,7 @@ const createStore = () => {
         },
         {
           title : 'Circle on Mouse',
-          tags : ['Three.js','Image','Component'],
+          tags : ['Cursor','Hover'],
           origin : 'https://theshift.tokyo/',
           link : 'circle-on-mouse',
           github : 'https://www.youtube.com/?pbjreload=10',
@@ -26,7 +26,7 @@ const createStore = () => {
         },
         {
           title : 'Circle Hamburger Menu',
-           tags : ['Naviagtion','Component'],
+           tags : ['Naviagtion','Menu'],
            origin : 'https://www.bigyouth.fr/en',
           link : 'circle-hamburger-menu',
           github : 'https://www.youtube.com/?pbjreload=10',
@@ -34,7 +34,7 @@ const createStore = () => {
         },
         {
           title : 'Outdoors Template',
-         tags : ['Three.js','Image','Component'],
+         tags : ['Template','Slider','Instagram'],
           origin : 'https://tympanus.net/Development/OutdoorsTemplate/',
           link : 'outdoors-template',
           github : 'https://www.youtube.com/?pbjreload=10',
@@ -42,11 +42,19 @@ const createStore = () => {
         },
         {
           title : 'The gooey effect',
-           tags : ['Naviagtion','3D','Three.js'],
+           tags : ['Misc','SVG'],
           link : 'gooey-effect',
           origin : 'https://css-tricks.com/gooey-effect/',
           github : 'https://www.youtube.com/?pbjreload=10',
           thumbnail : 'https://cdn.pbrd.co/images/Hvish7K.png'
+        },
+        {
+          title : 'SVG Waving Animation',
+           tags : ['Misc','SVG'],
+          link : 'svg-wave',
+          origin : 'https://bodymovin.solutions/',
+          github : 'https://www.youtube.com/?pbjreload=10',
+          thumbnail : 'https://cdn.pbrd.co/images/HvkIGLt.png'
         },
        ],
     },

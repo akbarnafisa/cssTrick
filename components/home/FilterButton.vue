@@ -31,6 +31,7 @@
 	.filter-active .button-filter-inner-wrapper > div {
 	  opacity: 1;
 	  transform: translateY(0);
+
 	}
 
 	.button-filter-wrapper > div > div{
@@ -40,6 +41,7 @@
 	.button-filter-inner-wrapper > div{
 	  opacity: 0;
 	  transform: translateY(10px);
+	  margin-bottom: 10px;
 	  transition: opacity .3s ease, transform .3s ease;
 	}
 	.button-filter-inner-wrapper{

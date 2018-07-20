@@ -143,7 +143,7 @@
 
 <style scoped>
   .filter-active .card-wrapper {
-    transform: translate3d(0,50px,0);
+    transform: translate3d(0,100px,0);
   }
   .add-button{
     background : #061e46;
