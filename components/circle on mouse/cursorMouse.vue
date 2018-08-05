@@ -32,12 +32,18 @@
 				mouseX = e.pageX ;
         mouseY = e.pageY ;
 			});
-			setInterval(function() {
+			var cursorMove = function () {
+			  window.requestAnimationFrame(function () {
+			    setInterval(function() {
 					xp += (mouseX - xp) / 6;
     			yp += (mouseY - yp) / 6;
 			    mouse.style.left = xp + 'px';
 			    mouse.style.top = yp + 'px';
 				 }, 20);
+			  });
+			}
+			cursorMove()
+			
 		}
 	}
 </script>

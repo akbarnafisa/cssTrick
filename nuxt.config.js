@@ -14,6 +14,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Playfair+Display:700|Montserrat:300,700' }
     ]
   },
+  mode: 'spa',
   /*
   ** Customize the progress bar color
   */

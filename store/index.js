@@ -9,11 +9,19 @@ const createStore = () => {
       },
 			projects:[
         {
+          title : 'Input Material',
+           tags : ['Input','Form','Material'],
+          link : 'input-material',
+          origin : '',
+          github : '',
+          thumbnail : '/Img22.jpg'
+        },
+        {
           title : 'Material Button',
           tags : ['Button'],
           origin : '',
           link : 'material-button',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2018/04/particleeffects_featured.jpg'
         },
         {
@@ -21,7 +29,7 @@ const createStore = () => {
           tags : ['Cursor','Hover'],
           origin : 'https://theshift.tokyo/',
           link : 'circle-on-mouse',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://cdn.pbrd.co/images/HuSepQi.png'
         },
         {
@@ -29,7 +37,7 @@ const createStore = () => {
            tags : ['Naviagtion','Menu'],
            origin : 'https://www.bigyouth.fr/en',
           link : 'circle-hamburger-menu',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://cdn.pbrd.co/images/HuSez2Q.png'
         },
         {
@@ -37,7 +45,7 @@ const createStore = () => {
          tags : ['Template','Slider','Instagram'],
           origin : 'https://tympanus.net/Development/OutdoorsTemplate/',
           link : 'outdoors-template',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://cdn.pbrd.co/images/HuScXAM.png'
         },
         {
@@ -45,7 +53,7 @@ const createStore = () => {
            tags : ['Misc','SVG'],
           link : 'gooey-effect',
           origin : 'https://css-tricks.com/gooey-effect/',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://cdn.pbrd.co/images/Hvish7K.png'
         },
         {
@@ -53,9 +61,18 @@ const createStore = () => {
            tags : ['Misc','SVG'],
           link : 'svg-wave',
           origin : 'https://bodymovin.solutions/',
-          github : 'https://www.youtube.com/?pbjreload=10',
+          github : '',
           thumbnail : 'https://cdn.pbrd.co/images/HvkIGLt.png'
         },
+        // {
+        //   title : 'Image Distortion Effect',
+        //    tags : ['WebGL','SVG'],
+        //   link : 'image-distortion',
+        //   origin : 'https://tympanus.net/codrops/2017/10/10/liquid-distortion-effects/',
+        //   github : '',
+        //   thumbnail : '/Img22.jpg'
+        // },
+        
        ],
     },
 		mutations: {

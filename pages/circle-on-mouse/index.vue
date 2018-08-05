@@ -2,9 +2,9 @@
 	<div class="container">
 		<cursorMouse :mouseIn="mouseIn"></cursorMouse>
 	  <div class="nav-wrapper">
-	  	<cursorOnLink>Home</cursorOnLink />
-  		<cursorOnLink>About</cursorOnLink />
-  		<cursorOnLink>Project</cursorOnLink />
+	  	<cursorOnLink>Home</cursorOnLink>
+  		<cursorOnLink>About</cursorOnLink>
+  		<cursorOnLink>Project</cursorOnLink>
 	  </div>
 	  <div class="content">
 	  	<cursorCard></cursorCard>
@@ -24,23 +24,6 @@
 	      return this.$store.getters.getMouse
 	    }
 		},
-		methods : {
-			triggerIn(){
-					const mouseIn = {
-		        link : false,
-		        element : true,
-		      }
-				 this.$store.dispatch('changeMouse', mouseIn)
-				},
-				triggerOut(){
-					const mouseIn = {
-		        link : false,
-		        element : false,
-		      }
-				  this.$store.dispatch('changeMouse', mouseIn)
-				}
-		},
-		
 	}
 </script>
 <style scoped>

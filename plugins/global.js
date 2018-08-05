@@ -22,12 +22,25 @@ import navSection from '~/components/outdoors template/navSection'
 import indexSection from '~/components/outdoors template/indexSection'
 
 
+import inputMaterial from '~/components/input material/inputMaterial'
+import switchMaterial from '~/components/input material/switchMaterial'
 
 
 
 
-const components = {navSection, indexSection, contentSection,factSection,gallerySection,imageSection,moreSection,Card,FilterButton,Search,MaterialButton,MaterialButton2,cursorOnLink,cursorOnElement,cursorMouse,cursorCard,circleNav}
+
+
+
+
+const components = {
+  switchMaterial,
+  inputMaterial,
+  navSection, 
+  indexSection, 
+  contentSection,factSection,gallerySection,imageSection,moreSection,Card,FilterButton,Search,MaterialButton,MaterialButton2,cursorOnLink,cursorOnElement,cursorMouse,cursorCard,circleNav}
 
 Object.keys(components).forEach(key => {
   Vue.component(key, components[key])
 })
+
+

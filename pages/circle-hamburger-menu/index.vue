@@ -8,6 +8,20 @@
 		</div>
 	</div>
 </template>
+s
+<script>
+	export default {
+		data() {
+			return {
+			
+			}
+		},
+	}
+</script>
+
+<style scoped>
+
+</style>
 <script>
 	
 </script>

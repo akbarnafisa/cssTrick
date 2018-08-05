@@ -4,6 +4,7 @@ html{
 	color : rgb(40,60,80) ;
 }
 
+
 body{
   overflow-x: hidden;
   margin : 0;
@@ -30,6 +31,7 @@ body{
 
 a{
 	text-decoration: none;
+
 }
 
 .hidden{
