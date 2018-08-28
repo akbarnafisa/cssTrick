@@ -9,6 +9,22 @@ const createStore = () => {
       },
 			projects:[
         {
+          title : 'Calculator',
+           tags : ['Component',],
+          link : 'calculator',
+          origin : 'https://bodymovin.solutions/',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HvkIGLt.png'
+        },
+        {
+          title : 'Todo list',
+         tags : ['Component',],
+          origin : 'https://tympanus.net/Development/OutdoorsTemplate/',
+          link : 'todo-list',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HuScXAM.png'
+        },
+        {
           title : 'Input Material',
            tags : ['Input','Form','Material'],
           link : 'input-material',
