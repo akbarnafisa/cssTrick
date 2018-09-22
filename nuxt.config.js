@@ -21,14 +21,21 @@ module.exports = {
   loading: { color: '#3B8070' },
   css: [
     { src: '~/assets/main.css', lang: 'css'},
+    { src: '~/assets/main.scss', lang: 'scss'},
   ],
   plugins: [
     {src: '~/plugins/global.js'},
   ],
+  modules: [
+        ['nuxt-sass-resources-loader', [
+            '~/assets/main.scss',
+        ]]
+    ],
   /*
   ** Build configuration
   */
   build: {
+
     /*
     ** Run ESLint on save
     */

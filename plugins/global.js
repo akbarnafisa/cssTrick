@@ -25,11 +25,11 @@ import indexSection from '~/components/outdoors template/indexSection'
 import inputMaterial from '~/components/input material/inputMaterial'
 import switchMaterial from '~/components/input material/switchMaterial'
 
-
-
-
-
-
+import plugin from 'vue-lazyload-akamai'
+Vue.use(plugin, {
+  placeholder: '/placeholder.png',
+  fallback: '/broken-image.jpg'
+});
 
 
 const components = {

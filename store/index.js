@@ -9,12 +9,44 @@ const createStore = () => {
       },
 			projects:[
         {
+          title : 'Fast Typing',
+          tags : ['Component',],
+          origin : 'https://tympanus.net/Development/OutdoorsTemplate/',
+          link : 'fast-typing',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HuScXAM.png'
+        },
+        {
+          title : 'Vue Lazy Load',
+          tags : ['Component',],
+          link : 'lazy-load',
+          origin : 'https://bodymovin.solutions/',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HuSez2Q.png'
+        },
+        {
+          title : 'Vue Search Hightlight',
+          tags : ['Component',],
+          link : 'search-highlight',
+          origin : 'https://bodymovin.solutions/',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HuScXAM.png'
+        },
+        {
+          title : 'Calculator 2',
+           tags : ['Component',],
+          link : 'calculator-2',
+          origin : 'https://bodymovin.solutions/',
+          github : '',
+          thumbnail : 'https://cdn.pbrd.co/images/HDamD8R.png'
+        },
+        {
           title : 'Calculator',
            tags : ['Component',],
           link : 'calculator',
           origin : 'https://bodymovin.solutions/',
           github : '',
-          thumbnail : 'https://cdn.pbrd.co/images/HvkIGLt.png'
+          thumbnail : 'https://cdn.pbrd.co/images/HDalNr7.png'
         },
         {
           title : 'Todo list',
