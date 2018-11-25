@@ -20,17 +20,29 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   css: [
-    { src: '~/assets/main.css', lang: 'css'},
-    { src: '~/assets/main.scss', lang: 'scss'},
+    { src: '~/assets/main.css', lang: 'css' },
+    { src: '~/assets/main.scss', lang: 'scss' },
   ],
   plugins: [
-    {src: '~/plugins/global.js'},
+    { src: '~/plugins/global.js' },
+    // { src: '~plugins/ga.js', ssr: false }
   ],
   modules: [
-        ['nuxt-sass-resources-loader', [
-            '~/assets/main.scss',
-        ]]
-    ],
+    ['nuxt-sass-resources-loader', [
+      '~/assets/main.scss',
+    ]],
+    '@nuxtjs/google-analytics'
+  ],
+
+  'google-analytics': {
+    // 128160452 - craft
+    // 128240051 - test
+    id: 'UA-128240051-1',
+    ecommerce: {
+      enabled: true,
+      enhanced: true
+    }
+  },
   /*
   ** Build configuration
   */
@@ -39,7 +51,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       // if (isDev && isClient) {
       //   config.module.rules.push({
       //     enforce: 'pre',

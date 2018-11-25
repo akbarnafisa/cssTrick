@@ -26,6 +26,7 @@ import inputMaterial from '~/components/input material/inputMaterial'
 import switchMaterial from '~/components/input material/switchMaterial'
 
 import plugin from 'vue-lazyload-akamai'
+
 Vue.use(plugin, {
   placeholder: '/placeholder.png',
   fallback: '/broken-image.jpg'
@@ -35,9 +36,10 @@ Vue.use(plugin, {
 const components = {
   switchMaterial,
   inputMaterial,
-  navSection, 
-  indexSection, 
-  contentSection,factSection,gallerySection,imageSection,moreSection,Card,FilterButton,Search,MaterialButton,MaterialButton2,cursorOnLink,cursorOnElement,cursorMouse,cursorCard,circleNav}
+  navSection,
+  indexSection,
+  contentSection, factSection, gallerySection, imageSection, moreSection, Card, FilterButton, Search, MaterialButton, MaterialButton2, cursorOnLink, cursorOnElement, cursorMouse, cursorCard, circleNav
+}
 
 Object.keys(components).forEach(key => {
   Vue.component(key, components[key])
